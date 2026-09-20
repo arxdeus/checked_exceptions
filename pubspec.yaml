@@ -20,7 +20,12 @@ dependencies:
   analyzer_plugin_toolkit: ^1.0.0
 
 dev_dependencies:
-  analyzer_plugin_toolkit_testing: ^1.0.0
+  # The shared fix-test harness. A path dependency, because this package is
+  # never published: it is repository-internal tooling. That is allowed here
+  # precisely because it is a dev dependency, which a consumer of this package
+  # never resolves.
+  analyzer_plugin_toolkit_testing:
+    path: ../analyzer_plugin_toolkit_testing
   analyzer_testing: ^0.4.2
   # Only for the shared lint configuration in analysis_options.yaml. The
   # dependency points the other way at runtime: arxdeus_lints does not depend
