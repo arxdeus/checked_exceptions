@@ -1,9 +1,8 @@
 name: checked_exceptions
 description: >-
-  Analyzer plugin for checked exceptions in Dart: calls to @Throws-annotated
-  functions must be caught or propagated, and catch clauses must not silently
-  swallow what they catch. A curated table of SDK and Flutter members that are
-  known to throw is treated as if those members carried @Throws.
+  Checked exceptions for Dart, as an analyzer plugin. A call to a
+  @Throws-annotated function must be caught or propagated, and a catch clause
+  must not silently swallow it.
 version: 1.0.0
 homepage: https://github.com/arxdeus/checked_exceptions
 repository: https://github.com/arxdeus/checked_exceptions
