@@ -1,0 +1,18 @@
+# Excluded from the published archive.
+#
+# The examples depend on this package by path and carry dependency_overrides
+# pointing at sibling directories, so lifted out of the repository and into an
+# archive they would not resolve at all, and pub.dev's analysis of this package
+# would fail on them. They are demonstrations meant to be read in the
+# repository, and the README inlines what they show.
+example/
+example_flutter/
+
+# The repository's own lint configuration, which pulls in `arxdeus_lints`.
+# A consumer's analysis of this package should not be governed by it.
+analysis_options.yaml
+
+pubspec.lock
+build/
+coverage/
+reports/

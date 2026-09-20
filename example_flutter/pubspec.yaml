@@ -13,12 +13,26 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  # For the shared lint configuration this example's analysis_options.yaml
+  # includes. Not a workspace member, so it must name it itself.
+  arxdeus_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
-# The plugin above depends on `analyzer_plugin_toolkit` by version, because
-# that is what it publishes with. In the repository the toolkit is not on
-# pub.dev yet, so point the example at the working tree.
+# Not a workspace member, and the one place a path dependency survives.
+#
+# `flutter_test` pins `test_api`, which forces an old `package:test`, which
+# caps `analyzer` below the ^14 every plugin here needs. A workspace resolves
+# to a single version solution, so a Flutter package and an analyzer plugin
+# cannot both be members of it. This example therefore resolves on its own,
+# with `flutter pub get` run from this directory.
+#
+# Being outside the workspace, it cannot see the sibling packages by version
+# either, so it names them by path. That is correct for what this is: a
+# demonstration, never published, whose job is to show the rules firing
+# against the real Flutter SDK.
 dependency_overrides:
   analyzer_plugin_toolkit:
     path: ../../analyzer_plugin_toolkit
+  arxdeus_lints:
+    path: ../../arxdeus_lints
