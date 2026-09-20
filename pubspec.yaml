@@ -10,22 +10,19 @@ repository: https://github.com/arxdeus/arxdeus_lints
 environment:
   sdk: ^3.13.2
 
+resolution: workspace
+
 dependencies:
   analysis_server_plugin: ^0.3.23
-  analyzer_plugin_toolkit:
-    path: ../analyzer_plugin_toolkit
   analyzer: ^14.4.0
   analyzer_plugin: ^0.14.17
+  analyzer_plugin_toolkit: ^1.0.0
 
 dev_dependencies:
+  analyzer_testing: ^0.4.2
   # Only for the shared lint configuration in analysis_options.yaml. The
   # dependency points the other way at runtime: arxdeus_lints does not depend
   # on this package, so there is no cycle.
-  arxdeus_lints: any
-  analyzer_testing: ^0.4.2
+  arxdeus_lints: ^2.0.0
   test: ^1.25.6
   test_reflective_loader: ^0.4.0
-
-dependency_overrides:
-  arxdeus_lints:
-    path: ../../

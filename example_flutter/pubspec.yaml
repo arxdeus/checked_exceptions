@@ -15,3 +15,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+# The plugin above depends on `analyzer_plugin_toolkit` by version, because
+# that is what it publishes with. In the repository the toolkit is not on
+# pub.dev yet, so point the example at the working tree.
+dependency_overrides:
+  analyzer_plugin_toolkit:
+    path: ../../analyzer_plugin_toolkit
