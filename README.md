@@ -1,5 +1,9 @@
 # checked_exceptions
 
+[![pub package](https://img.shields.io/pub/v/checked_exceptions.svg)](https://pub.dev/packages/checked_exceptions)
+[![ci](https://github.com/arxdeus/checked_exceptions/actions/workflows/ci.yml/badge.svg)](https://github.com/arxdeus/checked_exceptions/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Checked exceptions for Dart, delivered as an [analyzer plugin][], so they run
 in your IDE and in `dart analyze` / `flutter analyze` with no extra tooling.
 
@@ -282,11 +286,21 @@ the same reason.
 ## Development
 
 ```sh
-dart analyze                          # must be clean
+dart analyze --fatal-infos            # must be clean
 dart test                             # rule matrices plus plugin registration
+dart run tool/verify_example.dart     # the plugin loads, and fires where documented
 dart run tool/verify_sdk_table.dart   # every table entry resolves
 dart run tool/benchmark.dart <dir>    # what the rules cost on real code
 ```
+
+`verify_example.dart` matters more than it looks. `dart test` drives the rules
+directly through the analyzer's testing harness, which never loads the plugin the
+way the analysis server does, so a plugin that fails to start leaves every test
+passing while reporting nothing at all for a real user. The example is the only
+place the whole path runs, and this holds it to its own `// reported:` comments.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the scope of the rules, the commit
+conventions, and how a release is cut.
 
 ## License
 
