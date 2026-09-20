@@ -9,13 +9,9 @@ homepage: https://github.com/arxdeus/checked_exceptions
 repository: https://github.com/arxdeus/checked_exceptions
 issue_tracker: https://github.com/arxdeus/checked_exceptions/issues
 
-# Ko-fi, mirrored by .github/FUNDING.yml which renders the Sponsor button on
-# GitHub. pub.dev turns this into a "Funding" link on the package page.
 funding:
   - https://ko-fi.com/arxdeus
 
-# Shown on pub.dev and searchable there. Only the vocabulary pub.dev accepts:
-# lowercase, hyphenated, no `dart` or `flutter`.
 topics:
   - analyzer-plugin
   - lints
@@ -33,9 +29,6 @@ dependencies:
 
 dev_dependencies:
   analyzer_testing: ^0.4.2
-  # Only for the shared lint configuration in analysis_options.yaml. The
-  # dependency points the other way at runtime: arxdeus_lints does not depend
-  # on this package, so there is no cycle.
   arxdeus_lints: ^1.0.0
   test: ^1.25.6
   test_reflective_loader: ^0.4.0

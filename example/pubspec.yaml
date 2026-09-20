@@ -6,17 +6,9 @@ version: 1.0.0
 environment:
   sdk: ^3.13.2
 
-# Reached by path, because the thing worth demonstrating is the code in this
-# repository rather than the last release. The path resolves inside the
-# published archive too, where `../` is the package root beside this directory,
-# so the example a reader downloads builds as well as the one here does.
-#
-# arxdeus_lints below comes from pub.dev, exactly as a consumer would get it.
 dependencies:
   checked_exceptions:
     path: ../
 
 dev_dependencies:
-  # For the shared lint configuration this example's analysis_options.yaml
-  # includes.
   arxdeus_lints: ^1.0.0

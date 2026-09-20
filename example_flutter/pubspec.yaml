@@ -13,17 +13,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  # For the shared lint configuration this example's analysis_options.yaml
-  # includes.
   arxdeus_lints: ^1.0.0
   flutter_test:
     sdk: flutter
-
-# The one place a path dependency survives, on this example's own parent above.
-#
-# `flutter_test` pins `test_api`, which forces an old `package:test`, which
-# caps `analyzer` below the ^14 an analyzer plugin needs. A Flutter package
-# and an analyzer plugin therefore cannot share one version solution, so this
-# example resolves on its own, with `flutter pub get` run from this directory.
-#
-# Everything else, arxdeus_lints included, comes from pub.dev.
