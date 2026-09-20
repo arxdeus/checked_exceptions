@@ -1,0 +1,9 @@
+# Consumers get the shared lint config and the plugin in one place.
+analyzer:
+  exclude:
+    - build/**
+include: package:arxdeus_lints/analysis_options/recommended.yaml
+
+plugins:
+  checked_exceptions:
+    path: ../

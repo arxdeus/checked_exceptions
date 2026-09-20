@@ -1,0 +1,17 @@
+name: checked_exceptions_flutter_example
+description: Demonstrates unhandled_throws against the real Flutter SDK.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  checked_exceptions:
+    path: ../
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

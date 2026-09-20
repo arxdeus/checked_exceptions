@@ -1,0 +1,8 @@
+# The checked_exceptions package eats the same dog food as the rest of the
+# repository: it includes the shared lint configuration that `arxdeus_lints`
+# ships, so the two packages are held to one standard.
+include: package:arxdeus_lints/analysis_options/recommended.yaml
+
+analyzer:
+  exclude:
+    - build/**

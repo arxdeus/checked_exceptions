@@ -1,0 +1,11 @@
+name: checked_exceptions_example
+description: Demonstrates the checked_exceptions analyzer plugin.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  checked_exceptions:
+    path: ../

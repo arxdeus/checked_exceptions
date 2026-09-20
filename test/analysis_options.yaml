@@ -1,0 +1,12 @@
+# Tests follow `test_reflective_loader` conventions, which conflict with a
+# couple of the repository-wide style rules.
+include: ../analysis_options.yaml
+
+linter:
+  rules:
+    # Test cases must be named `test_<something>` for the reflective loader to
+    # discover them, so they cannot be lowerCamelCase.
+    non_constant_identifier_names: false
+    # Fixtures are written as raw strings uniformly, so that adding a `$` or a
+    # `\` to one of them never silently changes its meaning.
+    unnecessary_raw_strings: false

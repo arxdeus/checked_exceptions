@@ -1,0 +1,29 @@
+name: checked_exceptions
+description: >-
+  Analyzer plugin for checked exceptions in Dart: calls to @Throws-annotated
+  functions must be caught or propagated, and catch clauses must not silently
+  swallow what they catch. A curated table of SDK and Flutter members that are
+  known to throw is treated as if those members carried @Throws.
+version: 1.0.0
+repository: https://github.com/arxdeus/arxdeus_lints
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  analysis_server_plugin: ^0.3.23
+  analyzer: ^14.4.0
+  analyzer_plugin: ^0.14.17
+
+dev_dependencies:
+  # Only for the shared lint configuration in analysis_options.yaml. The
+  # dependency points the other way at runtime: arxdeus_lints does not depend
+  # on this package, so there is no cycle.
+  arxdeus_lints: any
+  analyzer_testing: ^0.4.2
+  test: ^1.25.6
+  test_reflective_loader: ^0.4.0
+
+dependency_overrides:
+  arxdeus_lints:
+    path: ../../
