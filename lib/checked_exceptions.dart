@@ -5,4 +5,4 @@
 /// rules that act on it.
 library;
 
-export 'package:checked_exceptions/src/annotations.dart' show Throws;
+export 'package:checked_exceptions/src/annotations.dart';

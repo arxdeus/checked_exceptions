@@ -1,5 +1,18 @@
 ## 1.0.0
 
+- `export` directives no longer carry `show` clauses. A `show` that lists
+  exactly what the file declares is noise, and one that drifts out of date is
+  worse than noise, so the exported surface is now decided by what the `src/`
+  files declare publicly.
+
+  That is only safe with something checking it, because without a `show` a
+  helper added to an exported `src/` file becomes public API the moment it is
+  written. `test/public_api_test.dart` pins the exported names of every
+  published library and fails naming the symbol when one leaks. The removal
+  itself was verified the same way: the exported surface is byte-identical to
+  what the `show` clauses produced, so the clauses were redundant rather than
+  load-bearing.
+
 - The shared analyzer-plugin infrastructure moved to a new package,
   `analyzer_plugin_toolkit`, in `packages/analyzer_plugin_toolkit`. The
   per-element memo table, the annotation lookup, the element normalization and
