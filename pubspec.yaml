@@ -5,8 +5,8 @@ description: >-
   swallow what they catch. A curated table of SDK and Flutter members that are
   known to throw is treated as if those members carried @Throws.
 version: 1.0.0
-repository: https://github.com/arxdeus/arxdeus_lints
-issue_tracker: https://github.com/arxdeus/arxdeus_lints/issues
+repository: https://github.com/arxdeus/checked_exceptions
+issue_tracker: https://github.com/arxdeus/checked_exceptions/issues
 
 environment:
   sdk: ^3.13.2
