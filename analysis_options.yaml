@@ -6,3 +6,12 @@ include: package:arxdeus_lints/analysis_options/recommended.yaml
 analyzer:
   exclude:
     - build/**
+    # Both examples exist to be reported on: they leave exceptions unhandled and
+    # swallow one on purpose, which is the whole demonstration. Analysing them
+    # from here would mean this package could never be clean. Each has its own
+    # analysis_options.yaml, enables this plugin against itself, and is covered
+    # by its own CI job: tool/verify_example.dart holds every diagnostic to the
+    # rule its comment claims, and tool/verify_sdk_table.dart resolves the table
+    # that example_flutter exists to exercise.
+    - example/**
+    - example_flutter/**
