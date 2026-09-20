@@ -3,6 +3,7 @@ import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/dart/element/type_provider.dart';
 import 'package:analyzer/dart/element/type_system.dart';
+import 'package:analyzer_plugin_toolkit/analyzer_plugin_toolkit.dart';
 import 'package:checked_exceptions/src/util/annotations.dart';
 import 'package:checked_exceptions/src/util/sdk_throws.dart';
 

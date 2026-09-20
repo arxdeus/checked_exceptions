@@ -1,5 +1,21 @@
 ## 1.0.0
 
+- The shared analyzer-plugin infrastructure moved to a new package,
+  `analyzer_plugin_toolkit`, in `packages/analyzer_plugin_toolkit`. The
+  per-element memo table, the annotation lookup, the element normalization and
+  the quick-fix test harness live there now, in one copy rather than two.
+
+  Splitting checked exceptions out had left both plugins holding near-identical
+  copies of the same code, including the annotation lookup, which is
+  correctness-critical: it is what stops a same-named annotation from another
+  package driving rules that know nothing about it. Two copies of that is one
+  too many.
+
+  The lookup is now `AnnotationFinder`, parameterized by the declaring package
+  instead of hardcoding one, and it carries its own tests, including a mutation
+  check that breaking the package comparison fails the suite. Nothing about the
+  rules changed: over the same sources they report byte-identical diagnostics.
+
 - Extracted from `arxdeus_lints`, where these rules shipped alongside the
   lifetime and secret rules. Checked exceptions are a self-contained idea with
   their own annotation, so they are now their own plugin: a project that wants

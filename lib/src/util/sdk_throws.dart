@@ -32,7 +32,7 @@ library;
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/dart/element/type_provider.dart';
-import 'package:checked_exceptions/src/util/cache.dart';
+import 'package:analyzer_plugin_toolkit/analyzer_plugin_toolkit.dart';
 
 /// A reference to an exception class, by declaring library and name.
 ///

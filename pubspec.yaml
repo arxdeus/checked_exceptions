@@ -12,6 +12,8 @@ environment:
 
 dependencies:
   analysis_server_plugin: ^0.3.23
+  analyzer_plugin_toolkit:
+    path: ../analyzer_plugin_toolkit
   analyzer: ^14.4.0
   analyzer_plugin: ^0.14.17
 

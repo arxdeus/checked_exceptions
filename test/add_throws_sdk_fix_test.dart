@@ -1,9 +1,10 @@
+import 'package:analyzer_plugin_toolkit/testing.dart';
 import 'package:analyzer_testing/analysis_rule/analysis_rule.dart';
+import 'package:checked_exceptions/src/plugin.dart';
 import 'package:checked_exceptions/src/rules/unhandled_throws.dart';
 import 'package:test_reflective_loader/test_reflective_loader.dart';
 
 import 'src/annotations_source.dart';
-import 'src/fix_test_support.dart';
 import 'src/mock_sdk_extensions.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class AddThrowsSdkFixTest extends AnalysisRuleTest {
     ).addFile('lib/checked_exceptions.dart', annotationsSource);
     addMockFlutter();
     rule = UnhandledThrowsRule();
-    registerPluginFixes();
+    registerPluginFixes(CheckedExceptionsPlugin());
     super.setUp();
     augmentMockSdk();
   }

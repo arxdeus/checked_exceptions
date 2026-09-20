@@ -5,6 +5,7 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/error/error.dart';
+import 'package:analyzer_plugin_toolkit/analyzer_plugin_toolkit.dart';
 import 'package:checked_exceptions/src/util/annotations.dart';
 
 /// Reports `catch` clauses that swallow the exception: the body does nothing,
