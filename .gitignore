@@ -9,3 +9,10 @@ pubspec.lock
 # convenience: the example depends on a published version because that is the
 # thing it demonstrates. CI writes one for itself, so it stays out of git.
 example/pubspec_overrides.yaml
+
+# Written and deleted by tool/verify_sdk_table.dart, which needs a library that
+# really imports package:flutter in order to resolve the table against the real
+# SDK. A copy was committed once by accident and outlived several table changes,
+# which pub noticed: a checked-in file that .gitignore excludes is a state
+# nothing can act on sensibly.
+example_flutter/lib/_verify_probe.dart
