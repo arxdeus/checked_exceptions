@@ -19,18 +19,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-# The one place a path dependency survives.
+# The one place a path dependency survives, on this example's own parent above.
 #
 # `flutter_test` pins `test_api`, which forces an old `package:test`, which
 # caps `analyzer` below the ^14 an analyzer plugin needs. A Flutter package
 # and an analyzer plugin therefore cannot share one version solution, so this
 # example resolves on its own, with `flutter pub get` run from this directory.
 #
-# Until the packages it names are published, it reaches them by path. That is
-# correct for what this is: a demonstration, never published, whose job is to
-# show the rules firing against the real Flutter SDK.
-dependency_overrides:
-  analyzer_plugin_toolkit:
-    path: ../../analyzer_plugin_toolkit
-  arxdeus_lints:
-    path: ../../arxdeus_lints
+# Everything else, arxdeus_lints included, comes from pub.dev.

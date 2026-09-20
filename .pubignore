@@ -4,8 +4,10 @@
 # one, and the example's pubspec names this package by version so it resolves
 # from pub.dev like any consumer's project.
 #
-# Its `pubspec_overrides.yaml` must go, though. That file redirects the version
-# constraints to the working tree for local development, and pub only drops
+# One file under it is excluded anyway. An override redirecting the example at
+# a local checkout is a development convenience, written by CI and possibly by
+# you, and it must not ship. Git ignores it, but a .pubignore replaces
+# .gitignore rather than adding to it, and pub only drops
 # `pubspec_overrides.yaml` automatically at the package root, not in a nested
 # directory like this one.
 example/pubspec_overrides.yaml
