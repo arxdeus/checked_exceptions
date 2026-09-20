@@ -17,4 +17,4 @@ dependencies:
 dev_dependencies:
   # For the shared lint configuration this example's analysis_options.yaml
   # includes.
-  arxdeus_lints: ^2.0.0
+  arxdeus_lints: ^1.0.0
