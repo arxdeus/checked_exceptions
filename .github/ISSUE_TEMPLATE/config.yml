@@ -1,0 +1,10 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Package page on pub.dev
+    url: https://pub.dev/packages/checked_exceptions
+    about: Released versions, API docs and the scores.
+  - name: A different rule misfired
+    url: https://github.com/arxdeus/qol_lints
+    about: >-
+      This package reports `unhandled_throws` and `empty_catch`. Other
+      diagnostics come from other plugins, listed here.

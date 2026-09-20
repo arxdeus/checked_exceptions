@@ -1,0 +1,62 @@
+name: Bug report
+description: A rule fired when it should not have, or stayed quiet when it should have fired.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please say which rule, and which direction it got wrong. For
+        `unhandled_throws` a false positive is the more disruptive kind, since
+        it fails a build; for `empty_catch` a false negative means a swallowed
+        exception went unnoticed.
+
+  - type: dropdown
+    id: rule
+    attributes:
+      label: Rule
+      options:
+        - unhandled_throws
+        - empty_catch
+        - the SDK table (a member that throws but is not listed, or vice versa)
+        - the quick fix
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected to be reported, and what was reported instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: >-
+        The smallest Dart file that shows it, including the `@Throws`
+        annotation and the call or catch clause in question.
+      render: dart
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: checked_exceptions version
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: >-
+        Output of `dart --version`, and the resolved `analyzer` version from
+        your lockfile. Element modelling changes between analyzer releases, so
+        both matter.
+      render: text
+    validations:
+      required: true

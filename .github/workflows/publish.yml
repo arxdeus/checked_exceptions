@@ -1,0 +1,23 @@
+name: publish
+
+# Publishes to pub.dev when a `v*` tag is pushed.
+#
+# pub authenticates this job through GitHub's OIDC token, which is why there is
+# no secret here and why `id-token: write` is required. Enable it once on
+# pub.dev under the package's Admin tab, matching this workflow's filename.
+#
+# This cannot publish a package's *first* version. pub.dev answers an automated
+# upload of a name it has never seen with "Only users are allowed to upload new
+# packages", and the Admin tab that authorises this workflow does not exist until
+# the package does. So 1.0.0 goes up from a workstation, and every release after
+# it from here.
+
+on:
+  push:
+    tags: ['v[0-9]+.[0-9]+.[0-9]+*']
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1

@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # Constraints here are caret ranges, so routine upgrades need no commit. What
+  # this catches is a dependency whose new major falls outside the range, which
+  # for `analyzer` is the update that actually matters: its element model moves
+  # between majors, and these rules inspect elements.
+  - package-ecosystem: pub
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: build
+    labels: [dependencies]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci
+    labels: [dependencies]

@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a rule change, or an SDK member that should be treated as throwing.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most common useful request is an SDK or Flutter member that throws
+        in practice but is not in the curated table. Those are easy to act on:
+        name the member and what it throws.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: The proposal
+      description: The member and its exceptions, or the rule behaviour you want.
+      render: dart
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: >-
+        The bug this would have caught, ideally one you actually hit.
+
+  - type: textarea
+    id: falsePositives
+    attributes:
+      label: What must stay unreported
+      description: >-
+        A rule that fails a build for code that was fine gets switched off,
+        which is worse than not having it. Which nearby cases must stay quiet?
