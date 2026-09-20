@@ -1,6 +1,17 @@
-# Consumers get the shared lint config and the plugin in one place. This is
-# exactly what a project adopting checked_exceptions writes.
+# The shared lint config and the plugin in one place, which is what a project
+# adopting `checked_exceptions` writes. A consumer names a version here:
+#
+#     plugins:
+#       checked_exceptions: ^1.0.0
+#
+# This example names a path instead, for the same reason its pubspec does: the
+# analysis server resolves a plugin the same way pub resolves a dependency, so
+# a version constraint would send it to pub.dev and demonstrate the last
+# release rather than this tree. Until the package is published there is no
+# release to find at all, and the server reports only that it could not set the
+# plugin up, which makes for an example that demonstrates nothing.
 include: package:arxdeus_lints/analysis_options/recommended.yaml
 
 plugins:
-  checked_exceptions: ^1.0.0
+  checked_exceptions:
+    path: ../
