@@ -281,7 +281,15 @@ the same reason.
 
 ## Development
 
+This package is developed inside the [`qol_lints`][ws] workspace, which checks
+it out as a submodule alongside its sibling packages. Its pubspec declares
+`resolution: workspace`, so a lone clone of *this* repository cannot resolve on
+its own: `dart pub get` needs the workspace root above it. Work on it there.
+
 ```sh
+git clone --recurse-submodules https://github.com/arxdeus/qol_lints
+cd qol_lints && dart pub get
+cd packages/checked_exceptions
 dart analyze                          # must be clean
 dart test                             # rule matrices plus plugin registration
 dart run tool/verify_sdk_table.dart   # every table entry resolves
@@ -293,3 +301,5 @@ dart run tool/benchmark.dart <dir>    # what the rules cost on real code
 MIT. See [LICENSE](LICENSE).
 
 [analyzer plugin]: https://pub.dev/packages/analysis_server_plugin
+
+[ws]: https://github.com/arxdeus/qol_lints
