@@ -5,8 +5,22 @@ description: >-
   swallow what they catch. A curated table of SDK and Flutter members that are
   known to throw is treated as if those members carried @Throws.
 version: 1.0.0
+homepage: https://github.com/arxdeus/checked_exceptions
 repository: https://github.com/arxdeus/checked_exceptions
 issue_tracker: https://github.com/arxdeus/checked_exceptions/issues
+
+# Ko-fi, mirrored by .github/FUNDING.yml which renders the Sponsor button on
+# GitHub. pub.dev turns this into a "Funding" link on the package page.
+funding:
+  - https://ko-fi.com/arxdeus
+
+# Shown on pub.dev and searchable there. Only the vocabulary pub.dev accepts:
+# lowercase, hyphenated, no `dart` or `flutter`.
+topics:
+  - analyzer-plugin
+  - lints
+  - static-analysis
+  - exceptions
 
 environment:
   sdk: ^3.13.2

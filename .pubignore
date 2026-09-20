@@ -28,3 +28,9 @@ example_flutter/
 build/
 coverage/
 reports/
+
+# Repository machinery, not package content. Pub already omits dot-directories
+# from an archive, so this is a statement of intent rather than a fix: if a
+# workflow or an issue form ever needs to be findable, it should be findable on
+# GitHub rather than inside a published archive.
+/.github/
