@@ -6,25 +6,15 @@ version: 1.0.0
 environment:
   sdk: ^3.13.2
 
+# Depended on by version, exactly as a consumer would write it, so the example
+# in the published archive resolves against pub.dev like any other project.
+#
+# In the repository these point at nothing that exists yet, so
+# `pubspec_overrides.yaml` beside this file redirects them to the working tree.
 dependencies:
-  checked_exceptions:
-    path: ../
+  checked_exceptions: ^1.0.0
 
 dev_dependencies:
   # For the shared lint configuration this example's analysis_options.yaml
-  # includes. Not a workspace member, so it must name it itself.
+  # includes.
   arxdeus_lints: ^2.0.0
-
-# Not a workspace member, on purpose: `plugins:` in an analysis options file is
-# only honoured at a workspace root or in a standalone package, so joining the
-# workspace would stop this example demonstrating the rules it exists to show.
-#
-# Resolving on its own is also the more honest demonstration, since it is how a
-# real consumer's project resolves. The path dependency above stands in for the
-# `checked_exceptions: ^1.0.0` a consumer would write, so the example always exercises the
-# working tree rather than the last published release.
-dependency_overrides:
-  analyzer_plugin_toolkit:
-    path: ../../analyzer_plugin_toolkit
-  arxdeus_lints:
-    path: ../../arxdeus_lints

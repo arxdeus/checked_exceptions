@@ -1,19 +1,6 @@
-# Consumers get the shared lint config and the plugin in one place.
-#
-# NOTE: the `path:` below is a placeholder until the packages are first
-# published. A consumer writes a version instead:
-#
-#     plugins:
-#       checked_exceptions: ^1.0.0
-#
-# and that is the form to switch to here once `checked_exceptions` and
-# `analyzer_plugin_toolkit` are on pub.dev. Until then this example reports no
-# plugin lints: the analyzer bootstraps a plugin by generating its own package
-# that depends on `checked_exceptions`, then resolving it against pub.dev, where
-# `analyzer_plugin_toolkit` does not exist yet. The rules themselves are fully
-# covered by each package's test suite. See tool/RELEASING.md.
+# Consumers get the shared lint config and the plugin in one place. This is
+# exactly what a project adopting checked_exceptions writes.
 include: package:arxdeus_lints/analysis_options/recommended.yaml
 
 plugins:
-  checked_exceptions:
-    path: ../
+  checked_exceptions: ^1.0.0
