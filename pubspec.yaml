@@ -6,6 +6,7 @@ description: >-
   known to throw is treated as if those members carried @Throws.
 version: 1.0.0
 repository: https://github.com/arxdeus/arxdeus_lints
+issue_tracker: https://github.com/arxdeus/arxdeus_lints/issues
 
 environment:
   sdk: ^3.13.2

@@ -1,9 +1,6 @@
-## 1.0.0
+# Changelog
 
-- Depends on `analyzer_plugin_toolkit` by version rather than by path. The
-  repository is a pub workspace, so that constraint still resolves to the
-  working tree during development while being the constraint the package
-  actually publishes with.
+## 1.0.0
 
 - `export` directives no longer carry `show` clauses. A `show` that lists
   exactly what the file declares is noise, and one that drifts out of date is

@@ -279,14 +279,6 @@ bundled analysis and drops diagnostics that come from a third-party analyzer
 plugin. Analyze the *file* rather than the directory in `example_flutter`, for
 the same reason.
 
-## Relationship to `arxdeus_lints`
-
-This package was extracted from [`arxdeus_lints`][], which keeps the rules
-about object lifetimes and secrets (`missing_dispose`, `sensitive_exposure`,
-`stateful_in_build`, `this_in_dispose`, `late_initialized_in_dispose`). The two
-are independent: either can be enabled without the other, and both can be
-enabled together.
-
 ## Development
 
 ```sh
@@ -296,5 +288,8 @@ dart run tool/verify_sdk_table.dart   # every table entry resolves
 dart run tool/benchmark.dart <dir>    # what the rules cost on real code
 ```
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 [analyzer plugin]: https://pub.dev/packages/analysis_server_plugin
-[`arxdeus_lints`]: https://pub.dev/packages/arxdeus_lints
