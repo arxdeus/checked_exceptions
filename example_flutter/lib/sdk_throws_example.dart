@@ -17,7 +17,6 @@ import 'dart:io';
 
 import 'package:checked_exceptions/checked_exceptions.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/services/message_codec.dart';
 
 // --- dart:core: parsing. ---
 

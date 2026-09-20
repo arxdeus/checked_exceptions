@@ -4,7 +4,7 @@
 import 'package:checked_exceptions/checked_exceptions.dart';
 
 /// Thrown by [loadConfig].
-class ConfigError implements Exception {}
+class ConfigError implements Exception;
 
 /// A function that advertises what it can throw.
 @Throws({ConfigError})
