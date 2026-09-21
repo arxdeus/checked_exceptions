@@ -29,8 +29,9 @@ void log(Object value) {}
 class EmptyCatchTest extends AnalysisRuleTest {
   @override
   void setUp() {
-    newPackage('checked_exceptions')
-        .addFile('lib/checked_exceptions.dart', annotationsSource);
+    newPackage(
+      'checked_exceptions',
+    ).addFile('lib/checked_exceptions.dart', annotationsSource);
     rule = EmptyCatchRule();
     super.setUp();
   }

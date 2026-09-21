@@ -32,8 +32,9 @@ import 'package:checked_exceptions/checked_exceptions.dart';
 class SdkThrowsTest extends AnalysisRuleTest {
   @override
   void setUp() {
-    newPackage('checked_exceptions')
-        .addFile('lib/checked_exceptions.dart', annotationsSource);
+    newPackage(
+      'checked_exceptions',
+    ).addFile('lib/checked_exceptions.dart', annotationsSource);
     addMockFlutter();
     rule = UnhandledThrowsRule();
     super.setUp();
