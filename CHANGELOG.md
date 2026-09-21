@@ -5,6 +5,12 @@ All notable changes to this package are recorded here. Versions follow
 minor bump rather than a patch, because either can fail a build that passed
 before.
 
+## 1.0.1
+
+Lowers the minimum Dart SDK from 3.13.2 to 3.11.0. Nothing else changed: every
+dependency already resolved on 3.11, so the old constraint kept consumers off
+earlier stable SDKs for no reason.
+
 ## 1.0.0
 
 First release.

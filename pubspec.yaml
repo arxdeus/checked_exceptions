@@ -3,7 +3,7 @@ description: >-
   Checked exceptions for Dart, as an analyzer plugin. A call to a
   @Throws-annotated function must be caught or propagated, and a catch clause
   must not silently swallow it.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/arxdeus/checked_exceptions
 repository: https://github.com/arxdeus/checked_exceptions
 issue_tracker: https://github.com/arxdeus/checked_exceptions/issues
