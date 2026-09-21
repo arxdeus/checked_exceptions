@@ -18,7 +18,7 @@ topics:
   - exceptions
 
 environment:
-  sdk: ^3.13.2
+  sdk: ^3.11.0
 
 dependencies:
   analysis_server_plugin: ^0.3.23

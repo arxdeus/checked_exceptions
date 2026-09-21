@@ -28,7 +28,7 @@ A curated table of SDK and Flutter members that are known to throw
 is treated as if those members carried `@Throws`, so the common sources of an
 uncaught `FormatException` are covered without annotating the SDK.
 
-Requires Dart 3.10 or later (analyzer plugins are not supported before that).
+Requires Dart 3.11 or later (analyzer plugins are not supported before that).
 
 ## Installation
 
